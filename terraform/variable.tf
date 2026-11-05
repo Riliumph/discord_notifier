@@ -29,3 +29,12 @@ variable "log_retention_period" {
   type    = number
   default = 7
 }
+
+# ============================================================
+# AWS EventBridge Scheduler
+# ============================================================
+
+variable "schedule_expression" {
+  type    = string
+  default = "cron(0 0 * * ? *)"
+}

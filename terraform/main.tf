@@ -11,4 +11,7 @@ module "notification" {
 
   # log
   log_retention_period = var.log_retention_period
+
+  # event bridge
+  schedule_expression = var.schedule_expression
 }
