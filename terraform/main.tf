@@ -5,4 +5,7 @@ locals {
 module "notification" {
   source = "./modules/notification"
   prefix = local.prefix
+
+  # python
+  package_dir = "${path.root}/../src"
 }
