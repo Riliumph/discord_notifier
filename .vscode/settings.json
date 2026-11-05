@@ -1,4 +1,33 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python.defaultInterpreterPath": "/usr/local/bin/python"
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "files.exclude": {
+        "**.bkp": true,
+        "**.dtmp": true,
+        "**/.terraform.lock.hcl": true,
+        "**/.DS_Store": true,
+        // Custom Setting
+        "**/.cache": true,
+        // * Don't show on a side panel
+        // Default Settings
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "**/__pycache__": true,
+        "**/.terraform": true,
+    },
+    "files.watcherExclude": {
+        "**.bkp": true,
+        "**.dtmp": true,
+        "**/.terraform.lock.hcl": true,
+        // Custom Setting
+        "**/.cache": true,
+        // * Don't observe this list
+        // * Disable: autoSave, formatOnSave
+        // Default Settings
+        "**/.git": true,
+        "**/__pycache__": true,
+        "**/.terraform": true,
+    },
 }
