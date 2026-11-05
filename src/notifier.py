@@ -32,16 +32,25 @@ def post_message(message: str, webhook_url: str) -> None:
         webhook_url,
         data=json.dumps(payload).encode("utf-8"),
         headers={
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "User-Agent": "notifier-lambda/1.0",
         },
         method="POST"
     )
-
-    with urllib.request.urlopen(request, timeout=10) as response:
-        logger.info(
-            "notification sent status=%s",
-            response.status
+    try:
+        with urllib.request.urlopen(request, timeout=10) as response:
+            logger.info(
+                "notification sent status=%s",
+                response.status
+            )
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8")
+        logger.error(
+            "status=%s body=%s",
+            e.code,
+            body
         )
+        raise
 
 
 def lambda_handler(event, context):
