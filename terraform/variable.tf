@@ -16,3 +16,7 @@ variable "region" {
   default = "ap-northeast-1"
 }
 
+variable "region-short" {
+  type    = string
+  default = "apne-1"
+}
