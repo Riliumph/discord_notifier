@@ -73,3 +73,6 @@ RUN sed -i -e 's/# ja_JP.UTF-8 UTF-8/ja_JP.UTF-8 UTF-8/' /etc/locale.gen \
 COPY --from=toolchain /usr/local/bin /usr/local/bin
 COPY --from=toolchain /usr/local/aws-cli /usr/local/aws-cli
 COPY --from=toolchain /etc/bash_completion.d /etc/bash_completion.d
+
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -q -r /tmp/requirements.txt
