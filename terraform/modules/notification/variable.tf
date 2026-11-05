@@ -16,3 +16,11 @@ variable "package_dir" {
   type        = string
 }
 
+# ============================================================
+# AWS CloudWatch Logs
+# ============================================================
+
+variable "log_retention_period" {
+  description = "Number of days to retain Lambda logs in CloudWatch Logs. Logs older than this period are automatically deleted. Set according to operational and compliance requirements."
+  type        = number
+}

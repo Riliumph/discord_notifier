@@ -8,4 +8,7 @@ module "notification" {
 
   # python
   package_dir = "${path.root}/../src"
+
+  # log
+  log_retention_period = var.log_retention_period
 }

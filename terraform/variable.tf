@@ -20,3 +20,12 @@ variable "region-short" {
   type    = string
   default = "apne-1"
 }
+
+# ============================================================
+# AWS CloudWatch Logs
+# ============================================================
+
+variable "log_retention_period" {
+  type    = number
+  default = 7
+}
