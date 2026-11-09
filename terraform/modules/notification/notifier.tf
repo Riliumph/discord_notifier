@@ -69,6 +69,13 @@ resource "aws_lambda_function" "notifier" {
   timeout     = 30
   memory_size = 128
 
+  # Advanced Logging Controls
+  logging_config {
+    log_format            = "JSON"
+    application_log_level = "INFO"
+    system_log_level      = "INFO"
+  }
+
   environment {
     variables = {
       MESSAGE_STORE_NAME = aws_ssm_parameter.message_store.name
