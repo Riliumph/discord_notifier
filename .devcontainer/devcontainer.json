@@ -27,10 +27,15 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				// docker
 				"ms-azuretools.vscode-docker",
-				"HashiCorp.terraform",
-				"streetsidesoftware.code-spell-checker",
 				"exiasr.hadolint",
+				// terraform
+				"HashiCorp.terraform",
+				// python
+				"ms-python.black-formatter",
+				// util
+				"streetsidesoftware.code-spell-checker",
 				"ionutvmi.path-autocomplete",
 				"shardulm94.trailing-spaces",
 				"DavidAnson.vscode-markdownlint",
