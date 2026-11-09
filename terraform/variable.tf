@@ -7,8 +7,7 @@ variable "project_name" {
 }
 
 variable "owner_name" {
-  type    = string
-  default = "FLAFURI"
+  type = string
 }
 
 variable "region" {

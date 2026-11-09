@@ -1,10 +1,32 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-containers",
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.tabSize": 2
+    },
+    "[markdown]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": "explicit"
+        },
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        "editor.wordWrap": "on",
+        "editor.wordWrapColumn": 80,
+        "files.trimTrailingWhitespace": false
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4
+    },
+    "[terraform]": {
+        "editor.formatOnSave": true
+    },
     "files.exclude": {
         "**.bkp": true,
         "**.dtmp": true,
-        "**/.terraform.lock.hcl": true,
         "**/.DS_Store": true,
         // Custom Setting
         "**/.cache": true,
@@ -13,21 +35,24 @@
         "**/.git": true,
         "**/.hg": true,
         "**/.svn": true,
-        "**/CVS": true,
-        "**/__pycache__": true,
         "**/.terraform": true,
+        "**/.terraform.lock.hcl": true,
+        "**/CVS": true,
+        "**/__pycache__": true
     },
     "files.watcherExclude": {
         "**.bkp": true,
         "**.dtmp": true,
-        "**/.terraform.lock.hcl": true,
         // Custom Setting
         "**/.cache": true,
         // * Don't observe this list
         // * Disable: autoSave, formatOnSave
         // Default Settings
         "**/.git": true,
-        "**/__pycache__": true,
         "**/.terraform": true,
+        "**/.terraform.lock.hcl": true,
+        "**/__pycache__": true
     },
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python.defaultInterpreterPath": "/usr/local/bin/python"
 }

@@ -26,8 +26,8 @@ provider "aws" {
   # 全リソースに強制的に付与するタグ
   default_tags {
     tags = {
-      project = var.project_name
-      owner   = var.owner_name
+      Project = var.project_name
+      Owner   = var.owner_name
     }
   }
 }
