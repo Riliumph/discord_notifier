@@ -66,8 +66,8 @@ resource "aws_lambda_function" "notifier" {
   handler = "notifier.lambda_handler"
   runtime = "python3.14"
 
-  timeout     = 30
-  memory_size = 128
+  timeout     = 10  # sec
+  memory_size = 128 # MB
 
   # Advanced Logging Controls
   logging_config {
