@@ -3,8 +3,9 @@ locals {
 }
 
 module "notification" {
-  source = "./modules/notification"
-  prefix = local.prefix
+  source     = "./modules/notification"
+  prefix     = local.prefix
+  owner_name = var.owner_name
 
   # python
   package_dir = "${path.root}/../src"

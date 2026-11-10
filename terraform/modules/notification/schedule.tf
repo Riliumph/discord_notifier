@@ -46,8 +46,11 @@ resource "aws_iam_role_policy" "scheduler" {
 # EventBridge Scheduler
 # ============================================================
 
+# Schedule
 resource "aws_scheduler_schedule" "daily" {
   name = "${local.scheduler_name}-daily"
+
+  group_name = aws_scheduler_schedule_group.owner_group.name
 
   schedule_expression          = var.schedule_expression
   schedule_expression_timezone = var.schedule_timezone
